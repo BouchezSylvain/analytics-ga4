@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 select
     round(
         sum((select value.double_value from unnest(event_params) where key = 'value')),

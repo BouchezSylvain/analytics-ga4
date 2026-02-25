@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 -- Analyse du funnel view_item => add_to_cart => begin_checkout => purchase
 with
     order_funnel as (

@@ -37,6 +37,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   analytics_ga4:
-    # Applies to all files under models/example/
-    analyticsga4:
+    # Applies to all files under models/analytics-ga4/
+    analytics-ga4:
       +materialized: table
