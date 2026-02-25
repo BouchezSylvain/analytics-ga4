@@ -1,0 +1,11 @@
+sources: # Mot clé qui indique que l'on définit nos sources
+  - name: ga4_events # Le nom avec lequel on va identifier cette source
+    database: bigquery-public-data # L'ensemble de données de notre connexion
+    schema: ga4_obfuscated_sample_ecommerce # Le dataset dans lequel se trouve nos tables
+    tables: # La liste des tables que l'on veut pouvoir récupérer
+      - name: events
+        identifier: "events_*"                # Ici on va récupéré toutes les tables commencant par "event_"
+        description: >
+          Table d'événements quotidienne. Le caractère `*` indique à dbt
+          d’appliquer le modèle à chaque table correspondant au motif
+          `events_YYYYMMDD`.
